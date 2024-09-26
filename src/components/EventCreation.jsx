@@ -11,49 +11,69 @@ const EventCreation = () => {
   const [routeData, setRouteData] = useState({});
   const [participants, setParticipants] = useState([]);
   const [justificationData, setJustificationData] = useState({});
-
+  
   const handleEventFormNext = (data) => {
     setEventData(data);
     setStep(2);
   };
 
-  const handleRoutePlannerNext = (data) => {
+  const handleRoutePlanner = (data) => {
     setRouteData(data);
     setStep(3);
   };
 
-  const handleParticipantListNext = (data) => {
+  const handlePartNext = (data) => {
     setParticipants(data);
     setStep(4);
   };
 
-  const handleJustificationNext = (data) => {
+  const handleJustNext = (data) => {
     setJustificationData(data);
     setStep(5);
   };
 
-  const handleConfirmEvent = () => {
-    // Final confirmation logic (save to database or submit event)
-    console.log('Event Data:', eventData);
-    console.log('Route Data:', routeData);
-    console.log('Participants:', participants);
-    console.log('Justification:', justificationData);
-    alert('Event Created Successfully!');
+  const ConfirmEvent = async () => {
+    const eventDetails = {
+      eventData,
+      routeData,
+      participants,
+      justificationData
+    };
+
+    try {
+      const response = await fetch('/api/events', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(eventDetails),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        alert(data.message); // "Data saved successfully!"
+      } else {
+        alert('Failed to save data');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('An error occurred while saving data');
+    }
   };
 
   return (
     <div>
       {step === 1 && <EventForm onNext={handleEventFormNext} />}
-      {step === 2 && <RoutePlanner onNext={handleRoutePlannerNext} />}
-      {step === 3 && <ParticipantList onNext={handleParticipantListNext} />}
-      {step === 4 && <JustificationPage onNext={handleJustificationNext} />}
+      {step === 2 && <RoutePlanner onNext={handleRoutePlanner} />}
+      {step === 3 && <ParticipantList onNext={handlePartNext} />}
+      {step === 4 && <JustificationPage onNext={handleJustNext} />}
       {step === 5 && (
         <EventSummary
           eventData={eventData}
           routeData={routeData}
           participants={participants}
           justificationData={justificationData}
-          onConfirm={handleConfirmEvent}
+          onConfirm={ConfirmEvent}
         />
       )}
     </div>
@@ -61,3 +81,4 @@ const EventCreation = () => {
 };
 
 export default EventCreation;
+
