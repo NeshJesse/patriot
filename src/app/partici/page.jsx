@@ -1,6 +1,7 @@
 'use client'
 import Sidebar from '@/components/Sidebar';
 import TopNav from '@/components/topnav';
+import WelfarePage from '@/components/Welfare';
 
 
 export default function ParticiPage() {
@@ -9,7 +10,7 @@ export default function ParticiPage() {
     <Sidebar/>
      <div className='text-center justify-center'>
       
-      <TopNav/>
+      <WelfarePage/>
 
      </div>
     

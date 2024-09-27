@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react'; // Import toggle icons
 
 const ProtestChecklist = () => {
-  const [isOpen, setIsOpen] = useState(false); // State to manage toggle
+  const [isOpen, setIsOpen] = useState(true); // State to manage toggle
 
   const checklistItems = [
     {
