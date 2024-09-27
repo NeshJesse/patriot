@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 // Import Supabase client
 import { supabase } from '../../supabaseClient';
 import { AlertTriangle, ShieldCheck, Home, UserPlus } from 'lucide-react';
+import SpecializedHelpCard from './Specialcard';
 
 const WelfarePage = () => {
   const [participants, setParticipants] = useState([]);
@@ -31,9 +32,10 @@ const WelfarePage = () => {
   };
 
   return (
+    <>
     <div className="max-w-6xl mx-auto p-6">
       <h1 className="text-3xl font-bold mb-6">Participant Welfare Tools</h1>
-      
+      <SpecializedHelpCard/>
       {/* Status Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
         
@@ -89,6 +91,7 @@ const WelfarePage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
