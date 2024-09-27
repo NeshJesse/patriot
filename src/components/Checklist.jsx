@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react'; // Import toggle icons
 
 const ProtestChecklist = () => {
+  const [isOpen, setIsOpen] = useState(false); // State to manage toggle
+
   const checklistItems = [
     {
       title: 'Obtain Necessary Permits',
       description: 'Ensure you have obtained any required permits from local authorities before the protest.',
       audience: 'Organizers',
-      icon: 'document-text', // Use relevant icon
+      icon: 'document-text',
     },
     {
       title: 'Plan Protest Route',
@@ -59,26 +62,34 @@ const ProtestChecklist = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-      {checklistItems.map((item, index) => (
-        <div key={index} className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
-          <div className="flex items-center space-x-3 mb-4">
-            {/* Icon */}
-            <div className="bg-indigo-600 text-white p-2 rounded-full">
-              {/* Use lucide-react icons here */}
-              <i className={`lucide lucide-${item.icon}`}></i>
+    <div className="max-w-4xl mx-auto p-4">
+      <div className="flex justify-between items-center bg-gray-100 p-4 rounded-lg cursor-pointer"
+           onClick={() => setIsOpen(!isOpen)}>
+        <h2 className="text-xl font-semibold">Protest Checklist</h2>
+        {isOpen ? <ChevronUp className="w-6 h-6" /> : <ChevronDown className="w-6 h-6" />}
+      </div>
+
+      {isOpen && (
+        <div className="mt-4 grid grid-cols-1 lg:grid-cols-1 gap-4">
+          {checklistItems.map((item, index) => (
+            <div key={index} className="bg-white shadow-lg rounded-lg p-4 border border-gray-200">
+              <div className="flex items-center space-x-3 mb-2">
+                <div className="bg-indigo-600 text-white p-2 rounded-full">
+                  <i className={`lucide lucide-${item.icon}`}></i>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
+                  <span className="text-sm text-gray-500">{item.audience}</span>
+                </div>
+              </div>
+              <p className="text-gray-700">{item.description}</p>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-              <span className="text-sm text-gray-500">{item.audience}</span>
-            </div>
-          </div>
-          {/* Description */}
-          <p className="text-gray-700">{item.description}</p>
+          ))}
         </div>
-      ))}
+      )}
     </div>
   );
 };
 
 export default ProtestChecklist;
+
