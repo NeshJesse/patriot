@@ -12,7 +12,7 @@ const RoutePlanner = ({ onNext }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-xl mx-auto p-6 bg-white shadow-md rounded-md space-y-4">
+    <form onSubmit={handleSubmit} className="text-black max-w-xl mx-auto p-6 bg-white shadow-md rounded-md space-y-4">
       <div className="flex flex-col">
         <label className="text-gray-700 mb-1 flex items-center">
           <MapPin className="w-5 h-5 mr-2 text-green-500" />

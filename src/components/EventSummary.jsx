@@ -3,7 +3,7 @@ import { CheckCircle, MapPin, Users, Video, Link as LinkIcon } from 'lucide-reac
 
 const EventSummary = ({ eventData, routeData, participants, justificationData, onConfirm }) => {
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="text-black max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6">Event Summary</h2>
       
       {/* Event Details */}
@@ -82,14 +82,14 @@ const EventSummary = ({ eventData, routeData, participants, justificationData, o
         )}
       </div>
 
-      {/* Confirm Button */}
-      <button 
-        onClick={onConfirm} 
-        className="mt-6 w-full bg-blue-600 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition-colors flex items-center justify-center"
-      >
+      
+      <button  onClick={onConfirm}  // This will now trigger the ConfirmEvent function
+       className="mt-6 w-full bg-blue-600 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition-colors flex items-center justify-center"
+       >
         <CheckCircle className="mr-2" />
         Confirm Event
       </button>
+
     </div>
   );
 };

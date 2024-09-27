@@ -5,6 +5,8 @@ import ParticipantList from './ParticipantList';
 import EventSummary from './EventSummary';
 import JustificationPage from './Justify';
 
+import { supabase } from '../../supabaseClient';
+
 const EventCreation = () => {
   const [step, setStep] = useState(1);
   const [eventData, setEventData] = useState({});
@@ -41,23 +43,21 @@ const EventCreation = () => {
     };
 
     try {
-      const response = await fetch('/api/events', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(eventDetails),
-      });
+      const { data, error } = await supabase
+        .from('protest')  // Insert into the protest table
+        .insert([
+          { event_details: eventDetails }  // Insert the data as JSONB
+        ]);
 
-      const data = await response.json();
-      if (response.ok) {
-        alert(data.message); // "Data saved successfully!"
+      if (error) {
+        console.error('Error saving event:', error.message);
+        alert('Failed to save event');
       } else {
-        alert('Failed to save data');
+        alert('Event saved successfully!');
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('An error occurred while saving data');
+      alert('An error occurred while saving event');
     }
   };
 

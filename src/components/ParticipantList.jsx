@@ -30,7 +30,7 @@ const ParticipantList = ({ onNext }) => {
   return (
     <div className="max-w-xl mx-auto p-6 bg-white shadow-md rounded-md space-y-6">
       <h2 className="text-2xl font-bold text-gray-700">Add Participants</h2>
-      <form onSubmit={handleAddParticipant} className="space-y-4">
+      <form onSubmit={handleAddParticipant} className="text-black space-y-4">
         <div className="flex flex-col">
           <label className="text-gray-700 mb-1 flex items-center">
             <UserPlus className="w-5 h-5 mr-2 text-purple-500" />
@@ -134,7 +134,7 @@ const ParticipantList = ({ onNext }) => {
       <ul className="space-y-2">
         {participants.map((participant, index) => (
           <li key={index} className="flex justify-between items-center bg-gray-100 p-2 rounded-md">
-            <div>
+            <div className='text-black'>
               <span className="font-bold">{participant.name}</span> ({participant.contact}) -{' '}
               <span className="text-sm text-gray-500">{participant.participantType}</span>
             </div>
