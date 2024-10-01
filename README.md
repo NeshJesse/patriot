@@ -1,43 +1,20 @@
-your-project/
-│
-├── app/                         # Next.js app directory
-│   ├── api/                     # API routes for Next.js
-│   │   └── events/              # Endpoint for event handling
-│   │       └── route.js         # API route for events
-│   ├── components/              # Reusable components (e.g., EventForm, EventSummary)
-│   ├── page.js                  # Main page component
-│   └── ...                      # Other Next.js files and folders
-│
-├── db/                          # Database related files
-│   └── events.db                # SQLite database file
-│
-└── README.md                    # Project documentation
+### 6. **Tech Stack**
 
-Name: REJECT THE SHIF BILL
+The **Peaceful Protest Organizer App** leverages a modern and scalable technology stack that ensures real-time functionality, data security, and smooth user experience. Here's a breakdown of the core technologies used:
 
-Description: We the Kenyan People Reject the SHIF BILL in totality due to its exploitive nature.
+#### **Frontend: Next.js (React.js)**
+- Built with **Next.js**, a React framework, the frontend provides **server-side rendering** and **static site generation**, ensuring fast performance and SEO optimization. It enables the app to handle dynamic protest data and real-time updates efficiently.
+- **React.js** powers the dynamic, responsive UI, offering interactive maps, live updates, and easy navigation for organizers and participants alike.
 
-Date: 2024-10-12
+#### **Backend: Supabase Cloud (Freemium)**
+- **Supabase**, a backend-as-a-service (BaaS), is used for managing the database and authentication. Supabase provides an easy-to-use, scalable, and secure database solution with **PostgreSQL** as the underlying technology, making it ideal for handling participant data, event details, and real-time updates.
+- Supabase’s **realtime subscriptions** enable instant updates for participants, ensuring live communication and status changes.
+  
 
-Time: 10:20
 
-Category: Social Justice
-Route Details
+#### **Partnerships & APIs**
+- **Google Maps API**: Used for route planning and real-time navigation, showing safe zones, water stations, and gathering points.
 
-Start Location: Nairoibi CBD
+- **Geolocation API**: Supports live location sharing between participants and buddies to enhance safety.
 
-End Location: Uhuru Park
-
-Waypoints: None
-Participants
-
-    Jesse Nehemiah (0702337041)
-
-Justification/Background
-
-Description: The purpose of the new Act is to establish the framework for the management of social health insurance and to establish the Social Health Authority. It lacks very essential things needed bby most Kenyans.
-Image:Uploaded
-Video:Watch Video
-Related Links:
-
-    https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://mmsadvocates.co.ke/revolutionizing-healthcare-a-guide-to-kenyas-social-health-insurance-act-2023/&ved=2ahUKEwipxJSck96IAxU-T6QEHfPzIyMQFnoECDYQAQ&usg=AOvVaw3e8ZnPYQwFm-CAz0wz-Emc
+This combination of technologies ensures that the **Peaceful Protest Organizer App** delivers high performance, security, and real-time functionality, all while being user-friendly and scalable.
