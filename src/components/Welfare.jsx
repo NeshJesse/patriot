@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // Import Supabase client
 import { supabase } from '../../supabaseClient';
-import { AlertTriangle, ShieldCheck, Home, UserPlus, BriefcaseMedicalIcon } from 'lucide-react';
+import { AlertTriangle, ShieldCheck, Home, UserPlus, BriefcaseMedicalIcon, PhoneCallIcon } from 'lucide-react';
 import SpecializedHelpCard from './Specialcard';
 import CommChannelsCard from './Comms';
 
@@ -43,8 +43,11 @@ const WelfarePage = () => {
       <CommChannelsCard/>
       <SpecializedHelpCard/>
       {/* Status Cards */}
+      <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+        <PhoneCallIcon/>
+        Protesters Status</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-        
+     
         {/* Card for Safe Participants */}
         <div className="bg-white rounded-lg shadow-md p-4">
           <div className="flex items-center space-x-3 mb-4">

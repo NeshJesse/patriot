@@ -1,4 +1,4 @@
-import { MessageSquareLock } from 'lucide-react';
+import { CircleArrowDown, CircleArrowUp, MessageSquareLock } from 'lucide-react';
 import React, { useState } from 'react';
 
 const CommChannelsCard = () => {
@@ -49,7 +49,7 @@ const CommChannelsCard = () => {
         <span className="text-lg font-medium">
         <MessageSquareLock/>            
             Toggle Communication Channels</span>
-        <span>{isOpen ? '-' : '+'}</span> {/* Toggle icon */}
+        <span>{isOpen ? <CircleArrowUp/> : <CircleArrowDown/>}</span> {/* Toggle icon */}
       </button>
       
       {isOpen && ( // Conditional rendering of the card
