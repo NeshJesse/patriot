@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react'; // Import toggle icons
+import { ChevronDown, ChevronUp } from 'lucide-react'; 
 
 const ProtestChecklist = () => {
-  const [isOpen, setIsOpen] = useState(true); // State to manage toggle
+  const [isOpen, setIsOpen] = useState(false); 
 
   const checklistItems = [
     {
@@ -62,7 +62,7 @@ const ProtestChecklist = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
+    <div className="max-w-4xl h-200 overflow-auto mx-auto p-4">
       <div className="flex justify-between items-center bg-gray-100 p-4 rounded-lg cursor-pointer"
            onClick={() => setIsOpen(!isOpen)}>
         <h2 className="text-xl font-semibold">Protest Checklist</h2>
