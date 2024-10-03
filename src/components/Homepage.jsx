@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from '../../supabaseClient';
 import { ShareIcon } from 'lucide-react';
 import ProtestChecklist from './Checklist';
+import QuickToolsCard from './Quicktools';
 
 const HomePage = () => {
   const [protests, setProtests] = useState([]);
@@ -32,10 +33,11 @@ const HomePage = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 sm:p-10">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-center sm:text-left">
-        Peaceful Protest Organizer
+        Inject Buddy
       </h1>
       
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <QuickToolsCard/>
         {/* Checklist Component */}
         <ProtestChecklist />
 
@@ -54,7 +56,7 @@ const HomePage = () => {
             <div className="flex flex-col sm:flex-row sm:items-center gap-4">
               <button
                 className="rounded-full border border-solid border-gray-300 dark:border-white transition-colors flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-                onClick={() => window.location.href='/account'}
+                onClick={() => window.location.href='/invite'}
               >
                 Join
               </button>
