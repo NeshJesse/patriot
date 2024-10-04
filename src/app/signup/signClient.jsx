@@ -13,7 +13,7 @@ const SignInButton = () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/home`, // Redirects to /upload after successful sign-in
+        redirectTo: `${window.location.origin}/invite`, // Redirects to /upload after successful sign-in
       },
     });
     if (error) {
