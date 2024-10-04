@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from '../../supabaseClient';
 import { ShareIcon } from 'lucide-react';
 import ProtestChecklist from './Checklist';
-import QuickToolsCard from './Quicktools';
+import QuickToolsCard from './Toolscard';
 
 const HomePage = () => {
   const [protests, setProtests] = useState([]);

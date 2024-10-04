@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { UserPlus, Mail, Phone, Trash2, CheckCircle, Camera } from 'lucide-react'; // Importing icons
+import { UserPlus, Mail, Phone, Trash2, CheckCircle, Camera } from 'lucide-react'; 
 import { supabase } from '../../supabaseClient';
 
 const InviteForm = ({ onNext }) => {
@@ -14,7 +14,6 @@ const InviteForm = ({ onNext }) => {
     { fullName: '', phone: '' },
   ]);
 
-  // Function to handle participant addition
   const handleAddParticipant = (e) => {
     e.preventDefault();
     if (name && contact && idNumber && status && emergencyContacts.every(ec => ec.fullName && ec.phone)) {
@@ -43,7 +42,7 @@ const InviteForm = ({ onNext }) => {
 
     // Inserts data into Supabase
     const { error } = await supabase
-      .from('attendees') 
+      .from('participants') 
       .insert([{ data: data }]);
 
     if (error) {
