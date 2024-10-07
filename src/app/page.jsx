@@ -34,62 +34,58 @@ export default function Home() {
     
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-</head>
+    </head>
 
-<div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-gradient-to-br from-gray-100 to-gray-200">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-gradient-to-br from-gray-100 to-gray-200">
   <main className="flex flex-col gap-12 row-start-2 items-center sm:items-start">
     <Navbar/>
-    <p className="text-3xl font-extrabold text-gray-900">Inject Buddy - The tool that allows you to Organize and manage successful peacefull protests</p>
-    {/* Hero Image */}
+    <p className="text-4xl font-extrabold text-gray-900 text-center sm:text-left">Inject Buddy - Empower Your Voice, Amplify Your Impact</p>
+    
     <Image
       className="rounded-lg shadow-lg dark:invert"
       src="/hero.jpeg"
-      alt="Protest Organizer Logo"
+      alt="Peaceful Protest Organization"
       width={700}
       height={450}
       priority
     />
 
-    {/* Introductory Text */}
     <div className="text-center sm:text-left">
       <h1 className="text-4xl font-extrabold text-gray-900">
-        Organize Peaceful Protests with Ease
+        Revolutionize Peaceful Protest Organization
       </h1>
       <p className="mt-4 text-xl text-gray-700">
-        Whether you're an activist or a community leader, our app empowers you to
-        plan and manage peaceful protests with confidence. Share your cause and rally support.
+        Inject Buddy empowers activists and community leaders to plan, manage, and execute impactful peaceful protests. From logistics to safety, we've got you covered. Make your voice heard and drive meaningful change.
       </p>
     </div>
 
-    {/* Key Features List */}
-    <div className="bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-2xl font-semibold mb-4 text-gray-800">Key Features:</h2>
-      <ol className="list-inside list-decimal text-base text-left sm:text-left font-[family-name:var(--font-geist-mono)] space-y-3 text-gray-600">
-        <li>Create detailed protest events with maps, routes, and real-time updates.</li>
-        <li>Add stories, justifications, and share media to raise awareness.</li>
-        <li>Seamlessly invite participants and coordinate logistics.</li>
-        <li>Receive real-time notifications and updates for your events.</li>
-      </ol>
+    <div className="bg-white p-6 rounded-lg shadow-md w-full">
+      <h2 className="text-2xl font-semibold mb-4 text-gray-800">Powerful Features for Effective Advocacy:</h2>
+      <ul className="list-inside text-base text-left sm:text-left font-[family-name:var(--font-geist-mono)] space-y-3 text-gray-600">
+        <li>• Comprehensive Event Planning: Create detailed protest events with interactive maps, route planning, and real-time updates.</li>
+        <li>• Storytelling & Media Sharing: Amplify your message with compelling narratives and multimedia content.</li>
+        <li>• Seamless Coordination: Effortlessly manage participants, volunteers, and logistics.</li>
+        <li>• Safety First: Integrated tools for participant well-being, including emergency contacts and legal resources.</li>
+        <li>• Data-Driven Insights: Measure your impact with participant metrics and analytics.</li>
+      </ul>
     </div>
 
-    {/* Call to Action Buttons */}
     <div className="flex gap-6 items-center flex-col sm:flex-row">
       <a
         className="rounded-full border border-solid border-transparent bg-green-500 text-white py-3 px-6 text-lg font-semibold hover:bg-green-600 transition ease-in-out duration-300"
-        href="/create"
+        href="/signup"
       >
-        Get Started
+        Start Organizing Now
       </a>
       <a
         className="rounded-full border border-solid border-gray-400 text-gray-700 py-3 px-6 text-lg font-semibold hover:bg-gray-100 transition ease-in-out duration-300"
         href="/learn-more"
       >
-        Learn More
+        Explore Features
       </a>
     </div>
   </main>
 
-  {/* Footer */}
   <footer className="row-start-3 flex gap-8 items-center justify-center">
     <a
       className="flex items-center gap-2 text-blue-600 hover:underline hover:underline-offset-4"
@@ -103,7 +99,7 @@ export default function Home() {
         width={100}
         height={100}
       />
-      Learn About Human Rights
+      Understand Your Rights
     </a>
     <a
       className="flex items-center gap-2 text-blue-600 hover:underline hover:underline-offset-4"
@@ -117,11 +113,10 @@ export default function Home() {
         width={100}
         height={100}
       />
-      Nonviolence Advocacy
+      Principles of Nonviolence
     </a>
   </footer>
 </div>
-
     </>
   );
 }

@@ -60,12 +60,15 @@ const HomePage = () => {
               >
                 Join
               </button>
+              <a href='/invite'>
               <button
                 className="rounded-full border border-solid border-gray-300 dark:border-white transition-colors flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
               >
                 <ShareIcon className="w-5 h-5 mr-2" />
                 Invite Others
+                
               </button>
+              </a>
             </div>
           </div>
         ))}
