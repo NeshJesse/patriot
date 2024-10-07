@@ -1,5 +1,5 @@
 ### 1.DEPLOYED ON VERCEL
-LINK: https://imjectbuddy.vercel.app
+LINK: https://injectbuddy.vercel.app
 
 ### 6. **Tech Stack**
 
