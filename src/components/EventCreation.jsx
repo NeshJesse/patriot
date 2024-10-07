@@ -81,4 +81,3 @@ const EventCreation = () => {
 };
 
 export default EventCreation;
-

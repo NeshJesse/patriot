@@ -5,7 +5,7 @@ import SignInButton from "./signClient";
 const SignInPage = () => {
   return (
     <>
-    <head>
+        <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inject Buddy - Safeguard Protests and Organize with Ease</title>
@@ -18,16 +18,15 @@ const SignInPage = () => {
 
     <link rel="canonical" href="https://neshjesse.github.io/patriot/" />
     
-    <meta property="og:title" content="Inject Buddy - Safeguard Protests and Organize with Ease" />
     <meta property="og:description" content="Inject Buddy helps you organize peaceful protests effectively, ensuring safety and real-time coordination for participants." />
     <meta property="og:image" content="https://neshjesse.github.io/patriot/public/social.png" />
     <meta property="og:url" content="https://neshjesse.github.io/patriot/public/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Inject Buddy" />
-    
+    <meta property="og:title" content="Inject Buddy - Organize peacefull protests with Ease" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Inject Buddy - Safeguard Protests and Organize with Ease" />
+    <meta name="twitter:title" content="Inject Buddy - Organize peacefull protests with Ease" />
     <meta name="twitter:description" content="Enhance coordination, participant safety, and communication during peaceful protests with Inject Buddy." />
     <meta name="twitter:image" content="https://neshjesse.github.io/patriot/public/social.png" />
  
@@ -36,15 +35,15 @@ const SignInPage = () => {
     
 
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  </head>
+ </head>
   <div className="min-h-screen bg-gradient-to-br from-green-100 to-teal-200 flex items-center justify-center">
     <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
       <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">
-        Welcome to Protest Organizer
+        Welcome to Inject Buddy The Peacefull Protest Organizer
       </h1>
       <div className="mb-6 text-center">
         <p className="text-gray-600">
-          Sign up to create and manage peaceful protests
+          Sign up to create and manage peaceful and successful protests
         </p>
       </div>
       <SignInButton />

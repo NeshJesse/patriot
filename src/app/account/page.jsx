@@ -22,7 +22,6 @@ export default function AccountPage() {
 
     <link rel="canonical" href="https://neshjesse.github.io/patriot/" />
     
-    <meta property="og:title" content="Inject Buddy - Safeguard Protests and Organize with Ease" />
     <meta property="og:description" content="Inject Buddy helps you organize peaceful protests effectively, ensuring safety and real-time coordination for participants." />
     <meta property="og:image" content="https://neshjesse.github.io/patriot/public/social.png" />
     <meta property="og:url" content="https://neshjesse.github.io/patriot/public/" />
@@ -31,7 +30,8 @@ export default function AccountPage() {
     
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Inject Buddy - Safeguard Protests and Organize with Ease" />
+    <meta property="og:title" content="Inject Buddy - Organize peacefull protests with Ease" />
+    <meta name="twitter:title" content="Inject Buddy - Organize peacefull protests with Ease" />
     <meta name="twitter:description" content="Enhance coordination, participant safety, and communication during peaceful protests with Inject Buddy." />
     <meta name="twitter:image" content="https://neshjesse.github.io/patriot/public/social.png" />
  

@@ -38,19 +38,10 @@ const Navbar = () => {
             <Link href="/about" className="text-gray-700 hover:text-blue-600 text-lg font-medium">
               About
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 text-lg font-medium">
-              Contact
-            </Link>
-            <Link href="/faq" className="text-gray-700 hover:text-blue-600 text-lg font-medium">
-             FAQ
-            </Link>
           </div>
 
           {/* Call to Action */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link href="/login">
-              Login
-            </Link>
             <Link href="/signup">
               Sign Up
             </Link>
@@ -104,19 +95,6 @@ const Navbar = () => {
             className="block text-gray-700 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium"
             >
               About
-            </Link>
-            <Link href="/contact"
-            className="block text-gray-700 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium"
-            >
-              Contact
-            </Link>
-            <Link href="/faq"
-            className="block text-gray-700 hover:bg-gray-200 px-3 py-2 rounded-md text-base font-medium"
-            >
-              FAQ
-            </Link>
-            <Link href="/login" className="block text-gray-700 border border-gray-300 text-center mt-2 px-3 py-2 rounded-md">
-              Login
             </Link>
             <Link href="/signup" className="block bg-blue-500 text-white text-center mt-2 px-3 py-2 rounded-md">
               Sign Up

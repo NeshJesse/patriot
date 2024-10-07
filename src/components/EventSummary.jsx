@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, MapPin, Users, Video, Link as LinkIcon } from 'lucide-react';
+import { CheckCircle, MapPin, Users, Video, Link as LinkIcon, PhoneCallIcon } from 'lucide-react';
 
 const EventSummary = ({ eventData, routeData, participants, justificationData, onConfirm }) => {
   return (
@@ -39,6 +39,19 @@ const EventSummary = ({ eventData, routeData, participants, justificationData, o
           ))}
         </ul>
       </div>
+
+      {/*cOMM LINKs 
+      <div className="mb-4">
+        <h3 className="text-xl font-semibold flex items-center mb-2">
+          <PhoneCallIcon className="mr-2" /> Communication Channels
+        </h3>
+        <ul className="list-disc list-inside">
+          {commlinks.map((commlink, index) => (
+            <li key={index}> ({commlink.link})</li>
+          ))}
+        </ul>
+      </div>
+      */}
       
       {/* Justification Details */}
       <div>

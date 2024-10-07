@@ -4,6 +4,8 @@ import { supabase } from '../../supabaseClient';
 import { AlertTriangle, ShieldCheck, Home, UserPlus, BriefcaseMedicalIcon, PhoneCallIcon } from 'lucide-react';
 import SpecializedHelpCard from './Specialcard';
 import CommChannelsCard from './Comms';
+import CommForm from './commform';
+import Routes from './Routes';
 
 const WelfarePage = () => {
   const [participants, setParticipants] = useState([]);
@@ -40,7 +42,8 @@ const WelfarePage = () => {
         Participant Welfare Tools
         <BriefcaseMedicalIcon/>
       </h1>
-      <CommChannelsCard/>
+      <CommForm/>
+      <Routes/>
       <SpecializedHelpCard/>
       {/* Status Cards */}
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">

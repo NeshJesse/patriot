@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { UserPlus, Mail, Phone, Trash2, CheckCircle } from 'lucide-react'; // Importing icons
+import { UserPlus, Mail, Phone, Trash2, CheckCircle } from 'lucide-react';
 
 const ParticipantList = ({ onNext }) => {
   const [participants, setParticipants] = useState([]);

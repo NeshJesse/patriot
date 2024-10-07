@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react';
 import Link from 'next/link';
-import { Home, MenuIcon, LucideFlaskConical, SettingsIcon, EditIcon, CogIcon, FileEditIcon, FormInput, StepForward, DollarSign, SyringeIcon, UsersRoundIcon, UserCircle } from 'lucide-react';
+import { Home, MenuIcon,SearchCheckIcon, SyringeIcon, UsersRoundIcon, UserCircle } from 'lucide-react';
 
 export default function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -40,6 +40,12 @@ export default function Sidebar() {
             <Link href="/partici" className="flex items-center p-4 hover:bg-white hover:text-black">
               <UsersRoundIcon className="w-6 h-6" />
               {!isCollapsed && <span className="ml-4">Participant Welfare </span>}
+            </Link>
+          </li>
+          <li>
+            <Link href="/receipts" className="flex items-center p-4 hover:bg-white hover:text-black">
+              <SearchCheckIcon className="w-6 h-6" />
+              {!isCollapsed && <span className="ml-4">Receipts Collection </span>}
             </Link>
           </li>
           <li>

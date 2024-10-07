@@ -7,7 +7,7 @@ const JustificationPage = ({ onNext }) => {
   const [videoLink, setVideoLink] = useState('');
   const [externalLinks, setExternalLinks] = useState('');
 
-  // Handle image upload
+  
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     setImage(URL.createObjectURL(file));
@@ -29,7 +29,7 @@ const JustificationPage = ({ onNext }) => {
       <h2 className="text-2xl font-bold mb-6">Protest Justification</h2>
       
       <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Description of the protest */}
+        
         <div>
           <label className="block text-sm font-medium mb-1">Background/Context</label>
           <textarea
@@ -42,7 +42,7 @@ const JustificationPage = ({ onNext }) => {
           />
         </div>
 
-        {/* Image Upload */}
+        
         <div className="flex flex-col">
           <label className="flex items-center text-sm font-medium mb-1">
             <ImageIcon className="mr-2" />
@@ -57,7 +57,6 @@ const JustificationPage = ({ onNext }) => {
           {image && <img src={image} alt="Uploaded" className="mt-2 w-24 h-24 object-cover" />}
         </div>
 
-        {/* Video Link */}
         <div>
           <label className="block text-sm font-medium mb-1">
             <Video className="inline mr-1" />
@@ -72,7 +71,7 @@ const JustificationPage = ({ onNext }) => {
           />
         </div>
 
-        {/* External Links */}
+       
         <div>
           <label className="block text-sm font-medium mb-1">
             <LinkIcon className="inline mr-1" />
