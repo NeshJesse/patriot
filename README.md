@@ -1,3 +1,6 @@
+### 1.DEPLOYED ON VERCEL
+LINK: https://imjectbuddy.vercel.app
+
 ### 6. **Tech Stack**
 
 The **Peaceful Protest Organizer App** leverages a modern and scalable technology stack that ensures real-time functionality, data security, and smooth user experience. Here's a breakdown of the core technologies used:
